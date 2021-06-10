@@ -14,12 +14,13 @@ def recording():
         cfg.f.close()
     else:
         cfg.recording = True
+        if not os.path.isdir(cfg.outputDir):
+            os.mkdir(cfg.outputDir)
         if cfg.currentDir == '':
             cfg.currentDir = time.strftime('%Y-%m-%d')
             os.mkdir(cfg.outputDir+cfg.currentDir)
             cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','w')
         else:
-            os.mkdir(cfg.outputDir+cfg.currentDir)
             cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a')
         cfg.fwriter = csv.writer(cfg.f)
 
