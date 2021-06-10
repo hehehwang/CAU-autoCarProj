@@ -16,12 +16,12 @@ def recording():
         cfg.recording = True
         if not os.path.isdir(cfg.outputDir):
             os.mkdir(cfg.outputDir)
-        if cfg.currentDir == '':
-            cfg.currentDir = time.strftime('%Y-%m-%d')
+        cfg.currentDir = time.strftime('%Y-%m-%d') if not cfg.currentDir
+        sif os.path.isdir(cfg.outputDir + cfg.currentDir):
+            cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a')
+        else:
             os.mkdir(cfg.outputDir+cfg.currentDir)
             cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','w')
-        else:
-            cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a')
         cfg.fwriter = csv.writer(cfg.f)
 
 def saveimage():
