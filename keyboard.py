@@ -97,7 +97,7 @@ if __name__ == '__main__':
                 cfg.wheel = 2
             
         else:
-            print('stoped by else')
+            # print('stoped by else')
             hw.motor_one_speed(0)
             hw.motor_two_speed(0)
             cfg.wheel = 0
