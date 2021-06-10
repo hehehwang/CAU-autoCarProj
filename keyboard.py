@@ -16,8 +16,9 @@ def recording():
         cfg.recording = True
         if not os.path.isdir(cfg.outputDir):
             os.mkdir(cfg.outputDir)
-        cfg.currentDir = time.strftime('%Y-%m-%d') if not cfg.currentDir
-        sif os.path.isdir(cfg.outputDir + cfg.currentDir):
+        if cfg.currentDir == '':
+            cfg.currentDir = time.strftime('%Y-%m-%d')
+        if os.path.isdir(cfg.outputDir + cfg.currentDir):
             cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a')
         else:
             os.mkdir(cfg.outputDir+cfg.currentDir)
