@@ -50,7 +50,7 @@ else:
 #print(len(x2_add))
 
 
-with open('data/' + cfg.currentDir + '/data.csv', 'a') as csvfile:
+with open('data/' + cfg.currentDir + '/data.csv', 'a', newline='') as csvfile:
     filewriter = csv.writer(csvfile, delimiter=',', quotechar='|')
     filewriter.writerows(x1_add)
     filewriter.writerows(x2_add)

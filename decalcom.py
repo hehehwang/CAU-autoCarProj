@@ -16,7 +16,7 @@ with open('data/' + cfg.currentDir + '/data.csv', newline='') as csvfile:
         if row[0][:2] != 'dc':
             originalrows.append(row)
 
-with open('data/' + cfg.currentDir + '/data.csv', 'w') as csvfile:
+with open('data/' + cfg.currentDir + '/data.csv', 'w', newline='') as csvfile:
     filewriter = csv.writer(csvfile, delimiter=',', quotechar='|')
     filewriter.writerows(originalrows)
 
@@ -40,7 +40,7 @@ with open('data/' + cfg.currentDir + '/data.csv', newline='') as csvfile:
         elif int(row[1]) == 3:
             x3.append(row[0])
 
-cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a')
+cfg.f=open(cfg.outputDir+cfg.currentDir+'/data.csv','a', newline='')
 cfg.fwriter = csv.writer(cfg.f)
 
 for i in range(len(x1)):
