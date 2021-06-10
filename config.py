@@ -10,7 +10,7 @@ wheel = 0  #0:stop, 1:left, 2:strait, 3:right
 recording = False
 
 cnt = 0
-outputDir = '/home/orangepi/autonomousCar/lesson4/data/'
+outputDir = '/data/'
 currentDir = 'training'
 file = ""
 f = ''
