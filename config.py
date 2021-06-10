@@ -11,7 +11,7 @@ recording = False
 
 cnt = 0
 outputDir = './data/'
-currentDir = 'training'
+currentDir = 'training3'
 file = ""
 f = ''
 fwriter = ''
@@ -31,10 +31,10 @@ wheel_alignment_right = 0
 
 
 # testing speed setting(
-ai_maxturn_speed = 100
-ai_minturn_speed = 20
-ai_normal_speed_left = 100
-ai_normal_speed_right = 100
+ai_maxturn_speed = 60
+ai_minturn_speed = -75
+ai_normal_speed_left = 30
+ai_normal_speed_right = 30
 
 
 
